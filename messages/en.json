@@ -1,0 +1,34 @@
+{
+  "Customers": {
+    "customers": "CUSTOMERS"
+  },
+  "Features": {
+    "features": "FEATURES"
+  },
+  "Home": {
+    "layout": "Layout",
+    "sample": "SAMPLE {number}",
+    "signUp": "Sign Up"
+  },
+  "Integrations": {
+    "Integrations": "INTEGRATIONS"
+  },
+  "NavBar": {
+    "features": "Features",
+    "customers": "Customers",
+    "integrations": "Integrations"
+  },
+  "SignUp": {
+    "confirmPassword": "Confirm Password",
+    "doesNotMatchPassword": "Does not match password",
+    "emailAddress": "Email Address",
+    "password": "Password",
+    "signUp": "Sign up"
+  },
+  "Verify": {
+    "resendCode": "Resend Code",
+    "resendCodeDate": "Resend Code: {date}",
+    "verificationCode": "Verification Code",
+    "verify": "Verify"
+  }
+}
