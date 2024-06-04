@@ -10,7 +10,6 @@ import {
   passwordEyeToggled,
 } from '../_redux/sign-up-slice'
 import {
-  Button,
   Card,
   CardBody,
   CardFooter,

@@ -2,6 +2,18 @@
   "Customers": {
     "customers": "CUSTOMERS"
   },
+  "CreateAccount": {
+    "createAccount": "Create Account",
+    "userName": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "dateOfBirth": "Date of Birth",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "iAgreeToThe": "I agree to the",
+    "termsAndConditions": "Terms and Conditions",
+    "signUp": "Sign Up"
+  },
   "Features": {
     "features": "FEATURES"
   },
