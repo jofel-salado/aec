@@ -2,14 +2,16 @@
 
 import { RootState } from '@/store'
 import {
-  confirmPasswordChanged,
-  confirmPasswordEyeToggled,
-  emailChanged,
+  addressChanged,
+  dateOfBirthChanged,
+  firstNameChanged,
   formStateChanged,
-  passwordChanged,
-  passwordEyeToggled,
-} from '../_redux/sign-up-slice'
+  lastNameChanged,
+  phoneNumberChanged,
+  usernameChanged,
+} from '../_redux/create-account-slice'
 import {
+  Avatar,
   Card,
   CardBody,
   CardFooter,
@@ -55,7 +57,23 @@ export default function Form() {
   return (
     <form action={formAction}>
       <Card className='w-[480px] p-[30px]'>
-        <CardHeader>
+        <CardHeader className='flex w-full flex-col items-center justify-center '>
+          <div className='flex w-full items-center justify-start gap-[14px] '>
+            <CgArrowLongLeft className='text-primary' />
+            <h1 className='text-[26px] font-bold'>{t('createAccount')}</h1>
+          </div>
+          <div className='relative m-auto mt-[60px] h-[96px] w-[96px]'>
+            <label htmlFor='uploadImage' className='h-full  w-full '>
+              <Avatar src={imagePlaceholder} className='h-full w-full' />
+              <Avatar
+                src={imageUploadButton}
+                className='h-36px] absolute bottom-0 right-0 m-auto w-[36px] cursor-pointer'
+              />
+              <input id='uploadImage' type='file' hidden />
+            </label>
+          </div>
+        </CardHeader>
+        {/* <CardHeader>
           <div className='flex w-full flex-col items-center justify-center'>
             <div className='flex w-full items-center justify-start gap-[14px] '>
               <CgArrowLongLeft className='text-primary' />
@@ -82,7 +100,7 @@ export default function Form() {
               <input id='uploadImage' type='file' hidden />
             </label>
           </div>
-        </CardHeader>
+        </CardHeader> */}
         <CardBody className='mb-[30px] mt-[40px] flex flex-col gap-[26px]'>
           <Input
             radius='sm'
@@ -92,7 +110,7 @@ export default function Form() {
             type='text'
             name='username'
             placeholder={t('userName')}
-            onChange={() => dispatch(emailChanged())}
+            onChange={() => dispatch(usernameChanged())}
             isInvalid={state.email.errorType == ErrorType.SERVER}
             className='text-[#989898]'
             classNames={{
@@ -114,7 +132,7 @@ export default function Form() {
               type='text'
               name='firstname'
               placeholder={t('firstName')}
-              onChange={() => dispatch(emailChanged())}
+              onChange={() => dispatch(firstNameChanged())}
               isInvalid={state.email.errorType == ErrorType.SERVER}
               className='text-[#989898]'
               classNames={{
@@ -135,7 +153,7 @@ export default function Form() {
               type='text'
               name='lastname'
               placeholder={t('lastName')}
-              onChange={() => dispatch(emailChanged())}
+              onChange={() => dispatch(lastNameChanged())}
               isInvalid={state.email.errorType == ErrorType.SERVER}
               className='text-[#989898]'
               classNames={{
@@ -157,7 +175,7 @@ export default function Form() {
             type='text'
             name='dateofbirth'
             placeholder={t('dateOfBirth')}
-            onChange={() => dispatch(emailChanged())}
+            onChange={() => dispatch(dateOfBirthChanged())}
             isInvalid={state.email.errorType == ErrorType.SERVER}
             className='text-[#989898]'
             classNames={{
@@ -178,7 +196,7 @@ export default function Form() {
             type='text'
             name='phonenumber'
             placeholder={t('phoneNumber')}
-            onChange={() => dispatch(emailChanged())}
+            onChange={() => dispatch(phoneNumberChanged())}
             isInvalid={state.email.errorType == ErrorType.SERVER}
             className='text-[#989898]'
             classNames={{
@@ -204,7 +222,7 @@ export default function Form() {
             type='text'
             name='address'
             placeholder={t('address')}
-            onChange={() => dispatch(emailChanged())}
+            onChange={() => dispatch(addressChanged())}
             isInvalid={state.email.errorType == ErrorType.SERVER}
             className='text-[#989898]'
             classNames={{
@@ -225,7 +243,7 @@ export default function Form() {
         </CardBody>
         <CardFooter>
           <div className='flex w-full flex-col items-start justify-center gap-[40px]'>
-            <Checkbox defaultSelected>
+            <Checkbox name='termsAndConditions' defaultSelected>
               <div className='flex gap-[4px] text-[14px]'>
                 <h1>{t('iAgreeToThe')}</h1>
                 <h1 className='font-bold'>{t('termsAndConditions')}</h1>
