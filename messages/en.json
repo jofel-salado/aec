@@ -23,10 +23,16 @@
     "doesNotMatchPassword": "Does not match password",
     "emailAddress": "Email Address",
     "password": "Password",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "signUpAsOwner": "Sign Up as Owner",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "login": "Login",
+    "next": "Next"
   },
   "Verify": {
-    "resendCode": "Resend Code",
+    "didNotReceiveCode": "Didn't receive a code?",
+    "pleaseEnterVerification": "Please enter the verification code we sent to your email.",
+    "resend": "Resend",
     "resendCodeDate": "Resend Code: {date}",
     "verificationCode": "Verification Code",
     "verify": "Verify"

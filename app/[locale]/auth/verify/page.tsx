@@ -10,18 +10,19 @@ export const metadata: Metadata = {
 }
 
 export default async function Page() {
-  const verification = await requestVerificationAccount()
+  // const verification = await requestVerificationAccount()
 
   return (
     <div className='flex h-screen'>
       <div className='m-auto'>
-        <Providers
+        <Form />
+        {/* <Providers
           state={{
             verificationCodeTimestamp: verification.verificationCodeTimestamp,
           }}
         >
           <Form />
-        </Providers>
+        </Providers> */}
       </div>
     </div>
   )

@@ -13,6 +13,7 @@ export function SubmitButton({
 
   return (
     <Button
+      color='primary'
       type='submit'
       fullWidth={true}
       isLoading={pending}
