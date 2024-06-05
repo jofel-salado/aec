@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Verify',
 }
 
-export default async function Page() {
+export default async function VerifyPage() {
   // const verification = await requestVerificationAccount()
 
   return (
